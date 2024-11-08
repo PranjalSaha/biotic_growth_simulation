@@ -14,7 +14,7 @@ implemented for other species in the future.
 _Made for SSPaCe Astrobiology Payload (SAP)_
 
 ## Table of Contents
-- [Aimed Features](#features)
+- [Aimed Features](#<aimed-features>)
 - [Installation](#installation)
 - [License](#license)
 
