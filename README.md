@@ -20,13 +20,13 @@ _Made for SSPaCe Astrobiology Payload (SAP)_
 
 ## Aimed Features
 ### Dynamic growth modeling: 
-    Simulate how biotic colonies grow based on nutrient availability.
+Simulate how biotic colonies grow based on nutrient availability.
 ### Environmental factors: 
-    Adjust temperature, pH, and nutrient distribution to see how they affect 
-    growth.
+Adjust temperature, pH, and nutrient distribution to see how they affect 
+growth.
 ### Data visualization: 
-    Graphs and visual output for understanding biotic population changes over 
-    time.
+Graphs and visual output for understanding biotic population changes over 
+time.
 
 ## Installation
 
