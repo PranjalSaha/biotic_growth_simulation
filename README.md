@@ -1,13 +1,16 @@
 # biotic_growth_simulation
 
 **THIS PROJECT IS UNDER DEVELOPMENT**
+
 This project aims to simulate the growth of biotic colonies over time, modeling 
 factors like nutrient availability, reproduction rates, and environmental 
 conditions. The simulation is implemented in C++ and aims to provide an 
 educational tool for understanding dynamics and growth patterns in a controlled 
 environment.
+
 The design process is underway for simulating bacterial breeds, but can be 
 implemented for other species in the future.
+
 _Made for SSPaCe Astrobiology Payload (SAP)_
 
 ## Table of Contents
