@@ -1,57 +1,50 @@
-#include <vector>
-using std::vector;
-
 #ifndef ENVIRONMENT_H
 #define ENVIRONMENT_H
 
-class activity;
+#include <vector>
+using std::vector;
 
-class environment
+class Environment
 {
 	
-	friend activity;
-
 protected:
 	struct patch
 	{
-		int nutrient_lvl;			// amount of nutrient in a patch	
-		int acetate_conc;			// amount of acetate in a patch
-		int pos[2];
-
-		patch()
-		{
-			nutrient_lvl = 0;		// sets the default concentrations to 0
-			acetate_conc = 0;
-			
-	   	}
+		float 
+			nutrientLevel,			// amount of nutrient in a patch	
+			acetateLevel;			// amount of acetate in a patch
+	
+		patch();
 		
-		void updatepatch( int nutrient_change, int acetate_change )
-		{							// function to change the concentrations
-									// of nutrients and acetate
-			nutrient_lvl += nutrient_change;
-			acetate_conc += acetate_change;
-		}
 	};
-	 int range_x, range_y;
+
+	vector<vector<vector<patch>>> locale; // 3D distribution of patches
+	vector<int> ranges; 
+
+	float CO2Level = 0.0f;
+	float temporalResolution = 1.0f;		  // units - seconds
 
 public:
 	
-	environment(int x = 100, int y = 100 )
-	{
-		// Creates a 2D vector of patches
-		// sets all values to 0 by default
-		/*vector <vector <patch> > environment(y, vector<patch>(x));
-		for ( int i; i < x; i++ )
-			for ( int j; j < y; j++)
-				pos = { i , j }		// Setting values of positions of vectors*/
-			
-		range_x = x;
-		range_y = y;
-	}
+	// Initialiser
+	Environment( int randomiseType = 0, vector<int> = {100,100,100},
+				 float nutrientValue = 100.0f, float value = 100.0f, 
+				 float tempres = 1.0f);
 
-	int getsize()
-	{ return range_x * range_y; }
-
+	
+	// Mutators
+	void updateNutrient(const vector<int>& location, float nutrientChange);
+	void updateAcetate(const vector<int>& location, float acetateChange);
+	void updateCO2(float CO2Increase);
+	void updateTemporalResolution(const float tempresNew);
+	
+	
+	// Accessors
+	vector<int> getSize() const;				// returns size of Environment	
+	float getNutrientLevel(const vector<int>& ) const;
+	float getAcetateLevel(const vector<int>& ) const;
+	float getCO2Level();
+	float getTemporalResolution();
 };
 
 #endif
