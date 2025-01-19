@@ -16,6 +16,7 @@ _Made for SSPaCe Astrobiology Payload (SAP)_
 ## Table of Contents
 - [Aimed Features](#aimed-features)
 - [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
 
 ## Aimed Features
@@ -30,10 +31,26 @@ time.
 
 ## Installation
 
+### Linux
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/biotic-growth-simulation.git
    cd biotic-growth-simulation
+   ```
+### Windows
+
+1. Download the repository in the desired location.
+2. Run the install.bat file in the scripts directory.
+
+Note : Make sure that python and g++ are added to you path variables.
+
+## Usage 
+
+1. Once any changes are made to the source files, run the build.bat script 
+from the scripts directory.
+2. To run the simulation and save graphs, run.bat file in the scripts directory.
 
 ## License
 
